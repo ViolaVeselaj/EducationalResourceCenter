@@ -1,0 +1,108 @@
+/* Font & bazat */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #1e88e5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  main {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* Seksionet e tutorialeve */
+  h2 {
+    margin-top: 40px;
+    border-left: 5px solid #1e88e5;
+    padding-left: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  ul li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  ul li a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    main {
+      padding: 20px 10px;
+    }
+  }
+  /* Stilizimi i titujve të klikueshëm për videot */
+main h3 a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  main h3 a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+  }
+  

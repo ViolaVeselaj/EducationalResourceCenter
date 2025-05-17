@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educational Resource Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Educational Resource Center</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="articles.html">Articles</a>
+      <a href="videos.html">Videos</a>
+      <a href="resources.html">Books & Resources</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Search Our Resources</h2>
+    <input type="text" id="searchBox" placeholder="Search..." />
+    <button onclick="search()">Search</button>
+
+<ul id="results"></ul>
+    <h2>Welcome to the Resource Center!</h2>
+    <p>Choose a section from the menu to explore educational content by topic or difficulty level.</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Resource Center</p>
+  </footer>
+
+<script>
+  async function search() {
+    const query = document.getElementById("searchBox").value;
+    const response = await fetch(
+      "https://YOUR_SEARCH_NAME.search.windows.net/indexes/YOUR_INDEX_NAME/docs?api-version=2021-04-30-Preview&search=" + encodeURIComponent(query),
+      {
+        headers: {
+          "api-key": "YOUR_QUERY_KEY"
+        }
+      }
+    );
+
+    const data = await response.json();
+    const results = document.getElementById("results");
+    results.innerHTML = "";
+
+    if (data.value.length === 0) {
+      results.innerHTML = "<li>No results found.</li>";
+    } else {
+      data.value.forEach(doc => {
+        results.innerHTML += `<li>${doc.title || "No title found"}</li>`;
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
